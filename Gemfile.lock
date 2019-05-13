@@ -58,6 +58,9 @@ GEM
       sassc (>= 2.0.0)
     bootstrap-will_paginate (1.0.0)
       will_paginate
+    bootstrap_form (4.2.0)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     builder (3.2.3)
     byebug (11.0.1)
     capybara (3.18.0)
@@ -268,6 +271,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap-sass
   bootstrap-will_paginate
+  bootstrap_form
   byebug
   capybara (>= 2.15)
   chromedriver-helper

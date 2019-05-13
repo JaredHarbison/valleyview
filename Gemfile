@@ -33,6 +33,7 @@ gem 'jquery-rails'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'bootstrap_form'
 gem 'thin'
 
 group :development, :test do
