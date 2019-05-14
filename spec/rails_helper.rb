@@ -35,5 +35,17 @@ RSpec.configure do |config|
   config.include Devise::Test::IntegrationHelpers, type: :feature
   config.include FactoryGirl::Syntax::Methods
   Capybara.javascript_driver = :poltergeist
+  #################################################
+  ###### do I need to remove following four  ######
+  ##### lines to ensure javaScript is tested? #####
+  #################################################
+  options = {js_errors: false}
+  Capybara.register_driver :poltergeist do |app|
+    Capybara::Poltergeist::Driver.new(app, options)
+  end
+  #################################################
+  #################################################
+  #################################################
+  #################################################
   Capybara.server = :puma
 end
