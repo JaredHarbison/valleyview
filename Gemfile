@@ -48,9 +48,15 @@ group :development do
 end
 
 group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'rails-controller-testing'
+  gem 'headless'
   gem 'capybara', '>= 2.15'
+  gem 'poltergeist'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
+  gem 'database_cleaner'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
