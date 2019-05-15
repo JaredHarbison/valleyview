@@ -4,6 +4,11 @@
     <%= render 'posts/branch/create_new_post', branch: branch %>
   </div>
   <div class="row">
+    <%= render 'posts/branch/search_form',
+              branch: branch,
+              search_placeholder: search_placeholder %>
+  </div> 
+  <div class="row">
     <%= render 'posts/branch/categories', branch: branch %>
   </div>
   <div class="row">
@@ -15,4 +20,4 @@
   <div class="inflate-scroll">
     <%= will_paginate @posts %>
   </div>
-</div> 
+</div>
