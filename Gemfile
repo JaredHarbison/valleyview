@@ -35,6 +35,7 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'bootstrap_form'
 gem 'thin'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
