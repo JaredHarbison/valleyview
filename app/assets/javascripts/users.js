@@ -21,7 +21,7 @@ $(function() {
     ).then(
       // loop through JSON and create User objects
       function(json) {
-        var users = json.map(function(obj) {
+        const users = json.map(function(obj) {
           return new User(obj["username"],
                           obj["first_name"],
                           obj["last_name"],
@@ -33,7 +33,7 @@ $(function() {
       // loop through User objects and add them to the page using jQuery
       function(users) {
         for (index in users) {
-          var user = users[index];
+          const user = users[index];
           $("#users-list").append("<li>" + user.full_name() + ", " + user.username + "</li>")
         }
       }
