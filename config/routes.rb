@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     get 'signup', to: 'devise/registrations#new'
   end
   root to: 'pages#index'
-  resources :users, only: [ :index ]
+  resources :users, only: [ :index, :show ]
 
   resources :posts do
     collection do
