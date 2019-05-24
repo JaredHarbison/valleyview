@@ -21,7 +21,7 @@ $(function() {
     ).then(
       // loop through JSON and create User objects
       function(json) {
-        const users = json.map(function(obj) {
+        var users = json.map(function(obj) {
           return new User(obj["username"],
                           obj["first_name"],
                           obj["last_name"],
@@ -33,37 +33,8 @@ $(function() {
       // loop through User objects and add them to the page using jQuery
       function(users) {
         for (index in users) {
-          const user = users[index];
+          var user = users[index];
           $("#users-index").append("<li>" + user.full_name() + ", " + user.username + "</li>")
-        }
-      }
-    );
-  }
-});
-
-
-$(function() {
-  if ($('#user-show').length) {
-    // fetch JSON from /users
-    fetch("/users/:id").then(
-      function(response) { return response.json(); }
-    ).then(
-      // loop through JSON and create User objects
-      function(json) {
-        const user = json.map(function(obj) {
-          return new User(obj["username"],
-                          obj["first_name"],
-                          obj["last_name"],
-                          obj["email"])
-        });
-        return user
-      }
-    ).then(
-      // loop through User objects and add them to the page using jQuery
-      function(user) {
-        for (show in user) {
-          const user = users[show];
-          $("#user-show").append("<li>" + user.full_name() + ", " + user.username + "</li>")
         }
       }
     );

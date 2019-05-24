@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   end
   root to: 'pages#index'
   resources :users, only: [ :index, :show ]
-
   resources :posts do
     collection do
       get 'hobby'
