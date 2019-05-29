@@ -1,9 +1,53 @@
+User.create!(username: "captainpike",
+            first_name: "Christopher",
+            last_name: "Pike",
+            email: "christopherpike@starfleet.com",
+            password: "chris@@1234",
+            password_confirmation: "chris@@1234")
+
+User.create!(username: "bettermidler",
+            first_name: "Better",
+            last_name: "Midler",
+            email: "better@midler.com",
+            password: "better@@1234",
+            password_confirmation: "better@@1234")
+
+User.create!(username: "hovabooboo",
+            first_name: "Hova",
+            last_name: "Harbison-Ortiz",
+            email: "hova@naughtydog.com",
+            password: "hova@@1234",
+            password_confirmation: "hova@@1234")
+
+User.create!(username: "alyssaedwards",
+            first_name: "Alyssa",
+            last_name: "Edwards",
+            email: "alyssa@edwards.com",
+            password: "alyssa@@1234",
+            password_confirmation: "alyssa@@1234")
+
+User.create!(username: "trinitythetuck",
+            first_name: "Trinity",
+            last_name: "TheTuck",
+            email: "trinity@thetuck.com",
+            password: "trinity@@1234",
+            password_confirmation: "trinity@@1234")
+
+User.create!(username: "jaredharbison",
+            first_name: "Jared",
+            last_name: "Harbison",
+            email: "jared.harbison@gmail.com",
+            password: "jared@@1234",
+            password_confirmation: "jared@@1234")
+
 def seed_users
   user_id = 0
   10.times do
     User.create(
-      username: "test#{user_id}",
-      email: "test#{user_id}@test.com",
+      username: Faker::Internet.username,
+      first_name: Faker::Name.first_name,
+      last_name: Faker::Name.last_name,
+      email: Faker::Internet.safe_email,
       password: '123456',
       password_confirmation: '123456'
     )
@@ -36,7 +80,7 @@ def seed_posts
   categories = Category.all
 
   categories.each do |category|
-    5.times do
+    10.times do
       Post.create(
         title: Faker::Lorem.sentences[0],
         content: Faker::Lorem.sentences[0],

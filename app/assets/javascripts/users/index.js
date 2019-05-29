@@ -14,7 +14,7 @@ User.prototype.full_name = function() {
 }
 
 $(function() {
-  if ($('#users-index').length) {
+  if ($('#users').length) {
     // fetch JSON from /users
     fetch("/users").then(
       function(response) { return response.json(); }
@@ -34,9 +34,24 @@ $(function() {
       function(users) {
         for (index in users) {
           var user = users[index];
-          $("#users-index").append("<li>" + user.full_name() + ", " + user.username + "</li>")
+          $("#users").append("<li>" + user.full_name() + ", " + user.username + "</li>")
         }
       }
     );
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+//$(() => {
+//  const userId = $('user').dataset.id
+//  fetch(`/users/${userId}`).then(
