@@ -3,11 +3,12 @@
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
 // create a User class
-function User(username, first_name, last_name, email) {
+function User(username, first_name, last_name, email, posts) {
   this.username = username;
   this.first_name = first_name;
   this.last_name = last_name;
   this.email = email;
+  this.posts = posts;
 }
 User.prototype.full_name = function() {
   return this.first_name + " " + this.last_name
@@ -25,7 +26,8 @@ $(function() {
           return new User(obj["username"],
                           obj["first_name"],
                           obj["last_name"],
-                          obj["email"])
+                          obj["email"],
+                          obj["posts"])
         });
         return users
       }
@@ -34,7 +36,11 @@ $(function() {
       function(users) {
         for (index in users) {
           var user = users[index];
-          $("#users").append("<li>" + user.full_name() + ", " + user.username + "</li>")
+          $("#users").append(
+                      "<ul>" + user.full_name() +
+                      "<li>" + user.username + " has " +
+                               user.posts.length + " posts" +
+                      "</li>" + "</ul>" + "<br>")
         }
       }
     );
