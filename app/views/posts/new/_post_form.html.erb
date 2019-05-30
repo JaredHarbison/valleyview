@@ -17,3 +17,9 @@
   <%= f.collection_select :category_id, @categories, :id, :name, class: 'form-control' %>
   <%= f.submit "Create a post", class: 'form-control' %>
 <% end %>
+
+<script type="text/javascript">
+function submitform() {
+  document.forms["post"].submit();
+}
+</script>
