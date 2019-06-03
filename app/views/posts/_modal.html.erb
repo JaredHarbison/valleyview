@@ -17,9 +17,33 @@
           <div class="loaded-data">
             <h3></h3>
             <p></p>
-            <div class="interested"><a href="">I'm interested</a></div>
+            <div class="interested"><a href="">I'm interested</a></div><br />
           </div><!-- loaded-data -->
         </div><!-- modal-body -->
     </div>
   </div>
 </div>
+
+<!--
+
+<button id="editorBtn" type="button">Enable Editing</button>
+<button id="saveEdit">Click to save</button>
+<div class="delete-post" id="post_<@=@post.id%>"><###########%= link_to "delete post", @post, method: :delete, data: {confirm: "Are you sure?"}, remote: true %></div><br />
+<div class="edit-post"><##########%= link_to "edit post", @post, method: :delete, data: {confirm: "Are you sure?"}, remote: true %></div><br />
+<script type="text/javascript">
+var editor = document.getElementById('editor');
+editor.isContentEditable;
+editor.contentEditable = true;
+$('#saveEdit').click(function() {
+  $edit = $('#editor').html();
+  $.ajax({
+    url: '/posts/118',
+    type: 'post',
+    data: {data: $edit},
+    datatype: 'html',
+    success: function(rsp){
+      alert(rsp);
+    }
+  });
+});
+-->

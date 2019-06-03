@@ -2,8 +2,11 @@
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
       <div class="posted-by">Posted by <%= @post.user.username %></div>
-      <h3><%= @post.title %></h3>
-      <p><%= @post.content %></p>
-    </div>
-  </div>
-</div>
+        <h3><%= @post.title %></h3>
+        <p contenteditable="true" id="editor"><%= @post.content %></p>
+      </div> <!-- posted-by -->
+      <div id="<%= @post.id %>" class="edit-post">  <a href=""> Save Edits </a></div><br />
+      <div id="<%= @post.id %>" class="delete-post"><a href=""> Delete Post </div><br />
+    </div> <!-- col-sm-6 col-sm-offset-3 -->
+  </div> <!-- row -->
+</div> <!-- single-post-content -->

@@ -11,4 +11,28 @@ $(document).on('turbolinks:load', function() {
     $('.loaded-data .interested a').attr('href', interested);
     $('.myModal').modal('show');
   });
+  $(".delete-post").click(function() {
+    $.ajax({
+      type: "DELETE",
+      url: $(this).attr('id')
+    });
+  });
+  $('.edit-post').click(function() {
+    $edit = $('#editor').html();
+    $.ajax({
+      type: "POST",
+      url: $(this).attr('id'),
+      data: {data: $edit},
+      datatype: 'html'
+    });
+  });
 });
+
+//   var id_post = $(this).attr('id');
+
+
+
+//    var destroy = $(this).find('.post-content .delete-post').attr('href');
+//    var edit = $(this).find('.post-content .edit-post').attr('href');
+//    $('.loaded-data .delete-post a').attr('href', destroy);
+//    $('.loaded-data .edit-post a').attr('href', edit);
