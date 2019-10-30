@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     get 'login', to: 'devise/sessions#new'
     get 'signup', to: 'devise/registrations#new'
   end
-  root to: 'welcome#index'
+  root to: 'pages#index'
   resources :users, only: [ :index, :show ]
   resources :posts do
       get "delete"
@@ -13,6 +13,9 @@ Rails.application.routes.draw do
       get 'hobby'
       get 'study'
       get 'team'
+      get 'apps'
+      get 'companies'
+      get 'inventions'
     end
   end
 end

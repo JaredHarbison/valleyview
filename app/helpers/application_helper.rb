@@ -6,7 +6,7 @@ module ApplicationHelper
   include UsersHelper
 
   def base_title
-    @base_title = "WerqBook"
+    @base_title = "VALLEY VIBE"
   end
 
 end

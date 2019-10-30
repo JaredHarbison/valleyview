@@ -61,6 +61,18 @@ class PostsController < ApplicationController
     posts_for_branch(params[:action])
   end
 
+  def apps 
+    posts_for_branch(params[:action])
+  end 
+
+  def companies 
+    posts_for_branch(params[:action])
+  end 
+
+  def inventions 
+    posts_for_branch(params[:action])
+  end 
+
   private
 
   def posts_for_branch(branch)
