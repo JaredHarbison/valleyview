@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<h1 align="center">Welcome to Valley View 👋</h1>
-=======
 <h1 align="center">Welcome to VALLEY VIEW 👋</h1>
->>>>>>> 40552d37f2c2fae589fb1644155fa5863c7451f2
 <p>
   <a href="https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
